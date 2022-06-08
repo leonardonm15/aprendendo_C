@@ -1,2 +1,2 @@
 # aprendendo_C
-aprendendo C na faculdade
+lógica básica, tipos de variaveis e etruturas basicas de controle
