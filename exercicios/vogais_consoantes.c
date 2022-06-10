@@ -1,21 +1,24 @@
 #include <stdio.h>
-#include <stdio.h>
-int main()
-{
-  int c = 0, 
-  int count = 0;
-  char s[1000];
+#include <stdlib.h>
 
-  printf("Input a string\n");
-  gets(s);
+int main() {
+  char vogais[10] = "aeiouAEIOU";
+  char nome[128];
+  int numero_vogais = 0;
 
-  while (s[c] != '\0') {
-    if (s[c] == 'a' || s[c] == 'A' || s[c] == 'e' || s[c] == 'E' || s[c] == 'i' || s[c] == 'I' || s[c] =='o' || s[c]=='O' || s[c] == 'u' || s[c] == 'U')
-      count++;
-    c++;
+  printf("digite o seu nome: ");
+  scanf("%s", nome);
+
+  for (int i=0; i<=128; i++) {
+    if (nome[i] == '\0') {
+      printf("o numero de vogais é %d e o numero de consoantes é %d", numero_vogais, i-numero_vogais);
+      break;
+    } else {
+        for (int j=0; j < 10; j++) {
+          if (nome[i] == vogais[j]) {
+            numero_vogais++;
+        }
+      }
+    }
+    }
   }
-
-  printf("Number of vowels in the string: %d", count);
-
-  return 0;
-}
